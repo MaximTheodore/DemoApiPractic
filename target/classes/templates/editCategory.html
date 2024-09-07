@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Редактирование категории</h1>
+<form action="#" th:action="@{/categories/update}" method="post" th:object="${category}">
+    <input type="hidden" th:field="*{id}" />
+    <input type="text" th:field="*{name}" placeholder="Category Name" required />
+    <div th:if="${#fields.hasErrors('name')}" style="color:red;">
+        <span th:errors="*{name}"></span>
+    </div>
+
+    <button type="submit">Обновить категорию</button>
+</form>
+<a href="#" th:href="@{/categories}">Обратно</a>
+</body>
+</html>

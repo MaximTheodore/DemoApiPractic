@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Список стран</h1>
+<form action="#" th:action="@{/countries}" method="post" th:object="${country}">
+    <input type="text" th:field="*{name}" placeholder="Название страны" required />
+    <div th:if="${#fields.hasErrors('name')}" style="color:red;">
+        <span th:errors="*{name}"></span>
+    </div>
+    <button type="submit">Добавить страну</button>
+</form>
+
+<h2>Существующие страны:</h2>
+<ul>
+    <li th:each="country : ${countries}">
+        <span th:text="${country.name}">Название страны</span>
+        <a th:href="@{/countries/edit/{id}(id=${country.id})}">Редактировать</a>
+        <a th:href="@{/countries/delete/{id}(id=${country.id})}" onclick="return confirm('Вы уверены, что хотите удалить?');">Удалить</a>
+    </li>
+</ul>
+</body>
+</html>
