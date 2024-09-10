@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирвоание товара</title>
+</head>
+<body>
+
+<h1>Редактирование товара</h1>
+<form th:action="@{/goods/update}" method="post" th:object="${good}">
+    <input type="hidden" th:field="*{id}" />
+
+    <input type="text" th:field="*{name}" placeholder="Название товара" required />
+    <div th:if="${#fields.hasErrors('name')}" style="color:red;">
+        <span th:errors="*{name}"></span>
+    </div>
+
+    <input type="number" step="0.01" th:field="*{price}" placeholder="Цена" required />
+    <div th:if="${#fields.hasErrors('price')}" style="color:red;">
+        <span th:errors="*{price}"></span>
+    </div>
+
+    <label for="category">Категория:</label>
+    <select th:field="*{category.id}" id="category" required>
+        <option value="" disabled>Выберите категорию</option>
+        <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
+    </select>
+    <div th:if="${#fields.hasErrors('category')}" style="color:red;">
+        <span th:errors="*{category}"></span>
+    </div>
+
+    <label for="suppliers">Поставщики:</label>
+    <select th:field="*{suppliers}" id="suppliers" multiple required>
+        <option th:each="supplier : ${suppliers}" th:value="${supplier.id}" th:text="${supplier.supplierName}"></option>
+    </select>
+    <div th:if="${#fields.hasErrors('suppliers')}" style="color:red;">
+        <span th:errors="*{suppliers}"></span>
+    </div>
+
+    <label for="code">Код:</label>
+    <select th:field="*{code.id}" id="code" required>
+        <option value="" disabled>Выберите код</option>
+        <option th:each="code : ${codes}" th:value="${code.id}" th:text="${code.name}"></option>
+    </select>
+    <div th:if="${#fields.hasErrors('code')}" style="color:red;">
+        <span th:errors="*{code}"></span>
+    </div>
+
+    <button type="submit">Обновить товар</button>
+</form>
+
+<a href="#" th:href="@{/goods}">Назад к списку товаров</a>
+
+</body>
+</html>

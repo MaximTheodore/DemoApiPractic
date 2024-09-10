@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:insert="blocks/header"></div>
+
+<h1>Список кодов товаров</h1>
+<form action="#" th:action="@{/codes}" method="post" th:object="${code}">
+    <input type="text" th:field="*{name}" placeholder="Название типа" required />
+    <div th:if="${#fields.hasErrors('name')}" style="color:red;">
+        <span th:errors="*{name}"></span>
+    </div>
+    <button type="submit">Добавить код товара</button>
+</form>
+
+<h2>Существующие коды товаров:</h2>
+<ul>
+    <li th:each="code : ${codes}">
+        <span th:text="${code.name}">Название кода</span>
+        <a th:href="@{/codes/edit/{id}(id=${code.id})}">Редактировать</a>
+        <a th:href="@{/codes/delete/{id}(id=${code.id})}" onclick="return confirm('Вы уверены, что хотите удалить?');">Удалить</a>
+    </li>
+</ul>
+</body>
+</html>

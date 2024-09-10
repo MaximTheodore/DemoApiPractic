@@ -4,15 +4,16 @@ import com.example.demo.model.CategoryModel;
 import com.example.demo.service.CategoryService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@PreAuthorize("hasAnyAuthority('ADMIN')")
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
@@ -22,7 +23,7 @@ public class CategoryController {
         List<CategoryModel> categories = categoryService.findAllCategories();
         model.addAttribute("categories", categories);
         model.addAttribute("category", new CategoryModel());
-        return "CategoryList";
+        return "CategoryHtml/CategoryList";
     }
 
     @PostMapping("/categories")
@@ -31,7 +32,7 @@ public class CategoryController {
             List<CategoryModel> categoryModels = categoryService.findAllCategories();
             model.addAttribute("category", category);
             model.addAttribute("categories", categoryModels);
-            return "CategoryList";
+            return "CategoryHtml/CategoryList";
         }
         categoryService.createCategory(category);
         return "redirect:/categories";
@@ -41,7 +42,7 @@ public class CategoryController {
     public String editCategory(@PathVariable Long id, Model model) {
         CategoryModel category = categoryService.findCategoryById(id);
         model.addAttribute("category", category);
-        return "editCategory";
+        return "CategoryHtml/editCategory";
     }
 
     @PostMapping("/categories/update")
@@ -50,7 +51,7 @@ public class CategoryController {
             List<CategoryModel> categoryModels = categoryService.findAllCategories();
             model.addAttribute("category", category);
             model.addAttribute("categories", categoryModels);
-            return "CategoryList";
+            return "CategoryHtml/CategoryList";
         }
         categoryService.updateCategory(category);
         return "redirect:/categories";

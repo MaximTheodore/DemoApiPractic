@@ -6,15 +6,16 @@ import com.example.demo.service.CountryService;
 import com.example.demo.service.SupplierService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@PreAuthorize("hasAnyAuthority('ADMIN')")
 public class SupplierController {
     @Autowired
     private SupplierService supplierService;
@@ -29,7 +30,7 @@ public class SupplierController {
         model.addAttribute("countries", countries);
         model.addAttribute("supplier", new SupplierModel());
 
-        return "SupplierList";
+        return "SupplierHtml/SupplierList";
     }
 
 
@@ -43,7 +44,7 @@ public class SupplierController {
             model.addAttribute("suppliers", supplierModels);
             model.addAttribute("countries", countries);
 
-            return "SupplierList";
+            return "SupplierHtml/SupplierList";
         }
         supplierService.createSupplier(supplier);
         return "redirect:/suppliers";
@@ -58,7 +59,7 @@ public class SupplierController {
         model.addAttribute("supplier", supplier);
         model.addAttribute("countries", countries);
 
-        return "editSupplier";
+        return "SupplierHtml/editSupplier";
     }
 
 
@@ -72,7 +73,7 @@ public class SupplierController {
             List<CountryModel> countries = countryService.findAllCountries();
             model.addAttribute("countries", countries);
 
-            return "SupplierList";
+            return "SupplierHtml/SupplierList";
         }
         supplierService.updateSupplier(supplier);
         return "redirect:/suppliers";

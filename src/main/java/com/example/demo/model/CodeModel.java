@@ -15,7 +15,6 @@ public class CodeModel {
 
     @Min(value = 500, message = "Код товара должен быть не меньше 500")
     @Max(value = 100000, message = "Код товара должен быть не больше 100000")
-    @NotBlank(message = "Введите код товара")
     private Long name;
 
     private boolean isDeleted = false;

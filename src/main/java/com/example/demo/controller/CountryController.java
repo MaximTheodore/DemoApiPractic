@@ -4,15 +4,16 @@ import com.example.demo.model.CountryModel;
 import com.example.demo.service.CountryService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@PreAuthorize("hasAnyAuthority('ADMIN')")
 public class CountryController {
     @Autowired
     private CountryService countryService;
@@ -22,7 +23,7 @@ public class CountryController {
         List<CountryModel> countries = countryService.findAllCountries();
         model.addAttribute("countries", countries);
         model.addAttribute("country", new CountryModel());
-        return "CountryList";
+        return "CountryHtml/CountryList";
     }
 
     @PostMapping("/countries")
@@ -31,7 +32,7 @@ public class CountryController {
             List<CountryModel> countryModels = countryService.findAllCountries();
             model.addAttribute("country", country);
             model.addAttribute("countries", countryModels);
-            return "CountryList";
+            return "CountryHtml/CountryList";
         }
         countryService.createCountry(country);
         return "redirect:/countries";
@@ -41,7 +42,7 @@ public class CountryController {
     public String editCountry(@PathVariable Long id, Model model) {
         CountryModel country = countryService.findCountryById(id);
         model.addAttribute("country", country);
-        return "editCountry";
+        return "CountryHtml/editCountry";
     }
 
     @PostMapping("/countries/update")
@@ -50,7 +51,7 @@ public class CountryController {
             List<CountryModel> countryModels = countryService.findAllCountries();
             model.addAttribute("country", country);
             model.addAttribute("countries", countryModels);
-            return "CountryList";
+            return "CountryHtml/CountryList";
         }
         countryService.updateCountry(country);
         return "redirect:/countries";

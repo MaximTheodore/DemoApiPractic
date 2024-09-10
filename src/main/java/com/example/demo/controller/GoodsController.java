@@ -12,16 +12,18 @@ import com.example.demo.service.GoodsService;
 import com.example.demo.service.SupplierService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@PreAuthorize("hasAnyAuthority('ADMIN','USER')")
 public class GoodsController {
 
 
@@ -50,7 +52,15 @@ public class GoodsController {
         model.addAttribute("suppliers", suppliers);
         model.addAttribute("codes", codes);
 
-        return "GoodsList";
+        model.addAttribute("isAdmin", isCurrentUserAdmin());
+
+        return "GoodsHtml/GoodsList";
+    }
+
+    private boolean isCurrentUserAdmin() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        return auth != null && auth.getAuthorities().stream()
+                .anyMatch(a -> a.getAuthority().equals("ADMIN"));
     }
 
     @PostMapping("/goods")
@@ -66,7 +76,7 @@ public class GoodsController {
             model.addAttribute("suppliers", suppliers);
             model.addAttribute("codes", codes);
             model.addAttribute("good", goods);
-            return "GoodsList";
+            return "GoodsHtml/GoodsList";
         }
         goodsService.createGoods(goods);
         return "redirect:/goods";
@@ -84,7 +94,7 @@ public class GoodsController {
         model.addAttribute("suppliers", suppliers);
         model.addAttribute("codes", codes);
 
-        return "editGoods";
+        return "GoodsHtml/editGoods";
     }
 
     @PostMapping("/goods/update")
@@ -98,7 +108,7 @@ public class GoodsController {
             model.addAttribute("suppliers", suppliers);
             model.addAttribute("codes", codes);
             model.addAttribute("good", goods);
-            return "editGoods";
+            return "GoodsHtml/editGoods";
         }
         goodsService.updateGoods(goods);
         return "redirect:/goods";

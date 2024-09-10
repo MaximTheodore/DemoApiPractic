@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <title>AUTH</title>
+</head>
+<body>
+<div th:if="${message}">
+  Пользователь уже существует
+</div>
+<form th:action="@{/registration}" method="post" th:object="${user}">
+  <div><label> Логин : <input type="text" name="username" th:field="*{username}"/> </label></div>
+  <div th:if="${#fields.hasErrors('username')}" style="color:red !important;">
+    <span th:errors="*{username}"></span>
+  </div>
+
+  <div><label> Пароль : <input type="password" name="password" th:field="*{password}"/> </label></div>
+  <div th:if="${#fields.hasErrors('password')}" style="color:red !important;">
+    <span th:errors="*{password}"></span>
+  </div>
+  <div><input type="submit" value="Регистрация"/></div>
+</form>
+</body>
+</html>

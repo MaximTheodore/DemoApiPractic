@@ -4,15 +4,16 @@ import com.example.demo.model.CodeModel;
 import com.example.demo.service.CodeService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@PreAuthorize("hasAnyAuthority('ADMIN')")
 public class TypeController {
     @Autowired
     private CodeService codeService;
@@ -22,7 +23,7 @@ public class TypeController {
         List<CodeModel> types = codeService.findAllCodes();
         model.addAttribute("codes", types);
         model.addAttribute("code", new CodeModel());
-        return "CodeList";
+        return "CodesHtml/CodeList";
     }
 
     @PostMapping("/codes")
@@ -31,7 +32,7 @@ public class TypeController {
             List<CodeModel> codeModels = codeService.findAllCodes();
             model.addAttribute("code", type);
             model.addAttribute("codes", codeModels);
-            return "CodeList";
+            return "CodesHtml/CodeList";
         }
         codeService.createCode(type);
         return "redirect:/codes";
@@ -41,7 +42,7 @@ public class TypeController {
     public String editType(@PathVariable Long id, Model model) {
         CodeModel type = codeService.findCodeById(id);
         model.addAttribute("code", type);
-        return "editCode";
+        return "CodesHtml/editCode";
     }
 
     @PostMapping("/codes/update")
@@ -50,7 +51,7 @@ public class TypeController {
             List<CodeModel> codeModels = codeService.findAllCodes();
             model.addAttribute("code", type);
             model.addAttribute("codes", codeModels);
-            return "CodeList";
+            return "CodesHtml/CodeList";
         }
         codeService.updateCode(type);
         return "redirect:/codes";
