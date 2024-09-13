@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6dd9fda0-a043-4c06-8360-e0ddb59aa4c8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2c8e45cd-5888-45ce-bc68-a0b9d57ee1d8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2c8e45cd-5888-45ce-bc68-a0b9d57ee1d8/storage_v2/_src_/database/testdb.kHS3yw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2c8e45cd-5888-45ce-bc68-a0b9d57ee1d8/storage_v2/_src_/database/testdb.kHS3yw/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/Swagger2Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/api/CategoryApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/api/CodeApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/api/CountryApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/api/GoodsApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/api/SupplierApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/global/GlobalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/error/ErrorDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringSecRoles/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/CountryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/CountryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SupplierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/TypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CategoryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CodeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CodeModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CountryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CountryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/GoodsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/GoodsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/SupplierModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/SupplierModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LoginHtml/registr.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/LoginHtml/registr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controller/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/CountryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controller/CountryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/SupplierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controller/SupplierController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/TypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controller/TypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/CategoryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/CategoryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/CountryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/CountryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/GoodsModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/GoodsModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/SupplierModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/SupplierModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/LoginHtml/registr.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/LoginHtml/registr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo1/src/main/resources/templates/GoodsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo1/src/main/resources/templates/GoodsList.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2lYCpxrB5IMOMXjBCULLJa3zC1X" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Demo1Application.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/User/UserProjects/JavaProject/Apitest/demo1/src/main/resources/templates/LoginHtml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e368b9938746fa090d6afd3628355133&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\User\UserProjects\JavaProject\Apitest\demo1\src\main\resources\templates\LoginHtml" />
+      <recent name="D:\User\UserProjects\JavaProject\Apitest\demo1\src\main\java\com\example\demo\controller" />
+      <recent name="D:\User\UserProjects\JavaProject\Apitest\demo1\src\main\java\com\example\demo\config" />
+      <recent name="D:\User\UserProjects\JavaProject\copy\demo1\src\main\resources\static" />
+      <recent name="D:\User\UserProjects\JavaProject\copy\demo1\src\main\resources\templates\LoginHtml" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\User\UserProjects\JavaProject\copy\demo1\src\main\resources\templates\SupplierHtml" />
+      <recent name="D:\User\UserProjects\JavaProject\copy\demo1\src\main\resources\templates\GoodsHtml" />
+      <recent name="D:\User\UserProjects\JavaProject\copy\demo1\src\main\resources\templates\CountryHtml" />
+      <recent name="D:\User\UserProjects\JavaProject\copy\demo1\src\main\resources\templates\CategoryHtml" />
+      <recent name="D:\User\UserProjects\JavaProject\copy\demo1\src\main\resources\templates\CodesHtml" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Demo1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="demo1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.Demo1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6dd9fda0-a043-4c06-8360-e0ddb59aa4c8" name="Changes" comment="" />
+      <created>1725347809866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725347809866</updated>
+      <workItem from="1725347810856" duration="16940000" />
+      <workItem from="1725433195764" duration="22440000" />
+      <workItem from="1725456613309" duration="612000" />
+      <workItem from="1725536319980" duration="288000" />
+      <workItem from="1725544182025" duration="60000" />
+      <workItem from="1725544261657" duration="11000" />
+      <workItem from="1725544361216" duration="143000" />
+      <workItem from="1725544521772" duration="256000" />
+      <workItem from="1725544968405" duration="2301000" />
+      <workItem from="1725549382873" duration="810000" />
+      <workItem from="1725609334859" duration="12913000" />
+      <workItem from="1725631752882" duration="2985000" />
+      <workItem from="1725683926888" duration="14529000" />
+      <workItem from="1725698893231" duration="15896000" />
+      <workItem from="1725716064635" duration="10000" />
+      <workItem from="1725862959751" duration="32000" />
+      <workItem from="1725863855672" duration="1669000" />
+      <workItem from="1725868391642" duration="15000" />
+      <workItem from="1725879664753" duration="1646000" />
+      <workItem from="1725953140187" duration="23986000" />
+      <workItem from="1725980550454" duration="13000" />
+      <workItem from="1725980691437" duration="22000" />
+      <workItem from="1726058203097" duration="430000" />
+      <workItem from="1726058727525" duration="1434000" />
+      <workItem from="1726090307994" duration="5000" />
+      <workItem from="1726138251827" duration="12500000" />
+      <workItem from="1726220975143" duration="2951000" />
+      <workItem from="1726225698094" duration="6046000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.security.authentication.UsernamePasswordAuthenticationToken" memberName="authorities" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

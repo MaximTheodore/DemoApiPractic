@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@PreAuthorize("hasAnyAuthority('ADMIN')")
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;

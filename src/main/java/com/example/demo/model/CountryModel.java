@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -19,7 +20,8 @@ public class CountryModel {
     private boolean isDeleted = false;
 
 
-    @OneToMany(mappedBy = "country", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "country")
+    @JsonManagedReference
     private Collection<SupplierModel> suppliers;
 
     public boolean isDeleted() {

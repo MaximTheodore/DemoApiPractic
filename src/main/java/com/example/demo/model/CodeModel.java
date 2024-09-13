@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -20,7 +21,8 @@ public class CodeModel {
     private boolean isDeleted = false;
 
 
-    @OneToOne(mappedBy = "code", fetch = FetchType.EAGER)
+    @OneToOne(mappedBy = "code")
+    @JsonBackReference
     private GoodsModel good;
 
     public Long getId() {

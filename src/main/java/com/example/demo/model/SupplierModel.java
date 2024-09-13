@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -32,11 +33,13 @@ public class SupplierModel {
     private boolean isDeleted = false;
 
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "country_id")
+    @JsonBackReference
     private CountryModel country;
 
-    @ManyToMany(mappedBy = "suppliers", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "suppliers")
+    @JsonBackReference
     private Collection<GoodsModel> goods;
 
     public boolean isDeleted() {

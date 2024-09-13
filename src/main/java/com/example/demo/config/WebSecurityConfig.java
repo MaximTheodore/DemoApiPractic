@@ -53,8 +53,10 @@ public class WebSecurityConfig {
                         .requestMatchers("/user/").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/admin/").hasRole("ADMIN")
                         .requestMatchers("/").permitAll()
+                        .requestMatchers("/v1/api/**").permitAll()
                         .anyRequest().authenticated()
                 )
+
                 .formLogin(form -> form
                         .loginPage("/login")
                         .defaultSuccessUrl("/goods")

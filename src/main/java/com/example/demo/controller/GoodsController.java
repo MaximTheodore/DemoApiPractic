@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@PreAuthorize("hasAnyAuthority('ADMIN','USER')")
 public class GoodsController {
 
 
@@ -52,16 +51,10 @@ public class GoodsController {
         model.addAttribute("suppliers", suppliers);
         model.addAttribute("codes", codes);
 
-        model.addAttribute("isAdmin", isCurrentUserAdmin());
 
         return "GoodsHtml/GoodsList";
     }
 
-    private boolean isCurrentUserAdmin() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        return auth != null && auth.getAuthorities().stream()
-                .anyMatch(a -> a.getAuthority().equals("ADMIN"));
-    }
 
     @PostMapping("/goods")
     public String createGoods(@Valid @ModelAttribute GoodsModel goods, BindingResult bindingResult, Model model) {

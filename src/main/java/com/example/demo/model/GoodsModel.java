@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
@@ -25,6 +26,7 @@ public class GoodsModel {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
+    @JsonBackReference
     private CategoryModel category;
 
     @ManyToMany
@@ -34,10 +36,12 @@ public class GoodsModel {
             inverseJoinColumns = @JoinColumn(name = "supplier_id")
 
     )
+    @JsonManagedReference
     private Collection<SupplierModel> suppliers;
 
     @OneToOne()
     @JoinColumn(name = "code_id")
+    @JsonManagedReference
     private CodeModel code;
 
 

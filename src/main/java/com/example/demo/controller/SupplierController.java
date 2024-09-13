@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@PreAuthorize("hasAnyAuthority('ADMIN')")
 public class SupplierController {
     @Autowired
     private SupplierService supplierService;
